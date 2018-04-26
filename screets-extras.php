@@ -2,7 +2,7 @@
 /*
     Plugin Name: Screets Extras
     Plugin URI: https://screets.io
-    Description: My extra codes, hooks and more.
+    Description: My extra hooks, styles and scripts.
     Version: 1.0.0
     Author: Screets
     Author URI: https://screets.io
