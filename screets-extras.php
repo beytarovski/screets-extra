@@ -49,9 +49,27 @@ function fn_sxtras_scripts()
     wp_enqueue_style( 'screets-extras' );*/
 }
 
+/**
+ * Add custom scripts for Screets Live Chat plugin.
+ * 
+ * @since Screets Extras (1.0.0)
+ */
+function fn_sxtras_livechat_scripts( $assets ) 
+{
+    $assets[] = array( 
+        'type' => 'js', 
+        'src' => SXTRAS_URL . '/extras-livechat.js?v=' . time() 
+    );
+
+    return $assets;
+}
+
 // 
 // Front-end only.
 // 
 if( ( ! is_admin() || defined( 'DOING_AJAX' ) ) && ! defined( 'DOING_CRON' ) ) {
     add_action( 'wp_enqueue_scripts', 'fn_sxtras_scripts' );
+
+    // Add custom scripts for Screets Live Chat plugin
+    add_filter( 'lcx_widget_assets', 'fn_sxtras_livechat_scripts', 100, 1 );
 }
