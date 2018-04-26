@@ -1,7 +1,7 @@
 /**
  * My custom JavaScript codes.
  */
-document.addEventListener( 'load', function(e) {
+window.addEventListener( 'load', function(e) {
 
     // Write your custom code here.
 
